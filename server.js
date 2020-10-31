@@ -1,9 +1,14 @@
+//requiring the papckages/dependencies from package.json
 const express = require("express");
 const mongoose = require("mongoose");
+//way to log things
+const morgan = require("morgan");
 
 const PORT = process.env.PORT || 3000;
 
 const app = express();
+
+app.use(morgan("dev"));
 
 //middleware
 app.use(express.urlencoded({ extended: true }));
@@ -20,6 +25,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/budget", {
 
 //requiring routes
 app.use(require("./routes/api.js"));
+app.use(require("./routes/html.js"));
 
 //connection to port
 app.listen(PORT, () => {

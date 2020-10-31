@@ -2,6 +2,7 @@ const API = {
   async getLastWorkout() {
     let res;
     try {
+      //correlates to first api route
       res = await fetch("/api/workouts");
     } catch (err) {
       console.log(err)
@@ -23,6 +24,7 @@ const API = {
 
     return json;
   },
+  //creates new workout, returns workout id
   async createWorkout(data = {}) {
     const res = await fetch("/api/workouts", {
       method: "POST",
