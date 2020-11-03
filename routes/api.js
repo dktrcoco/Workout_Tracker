@@ -15,7 +15,7 @@ router.get("/api/workouts", (req, res) => {
 // limits workout to last 7 days
 //the limit with the value of 7 will show the last 7 
 //days of workouts (one per day)
-router.get("/api/workouts", (req, res) => {
+router.get("/api/workouts/range", (req, res) => {
     Workout.find({}).limit(7)
         .then(dbWorkouts => {
             res.json(dbWorkouts);
@@ -24,6 +24,22 @@ router.get("/api/workouts", (req, res) => {
             res.status(400).json(err);
         });
 });
+
+//practice route for getting only cardio workouts
+// router.get("api/workouts", (req, res) => {
+//     Workout.find({ type: "cardio" })
+//         .then(dbWorkouts => {
+//             res.json(dbWorkouts);
+//         })
+//         .catch(err => {
+//             res.status(400).json(err);
+//         });
+// });
+
+//look up mongoose doc to see if this is possible
+// router.get("api/workouts", (req, res) => {
+//     Workout.find({ duration: >20 })
+// })
 
 router.post("/api/workouts", (req, res) => {
     Workout.create({})
@@ -46,8 +62,8 @@ router.put("/api/workouts/:id", (req, res) => {
         .catch(err => {
             res.status(400).json(err);
         });
-    });
+});
 
-    module.exports = router;
+module.exports = router;
 
 //   Model.findByIdAndUpdate(id, { name: 'jason bourne' }, options, callback)

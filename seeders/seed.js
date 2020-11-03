@@ -7,6 +7,7 @@ mongoose.connect("mongodb://localhost/workout", {
 });
 
 //this is the workout
+//seed is dummy data
 let workoutSeed = [
   {
     day: new Date().setDate(new Date().getDate()-10),

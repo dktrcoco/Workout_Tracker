@@ -29,5 +29,5 @@ app.use(require("./routes/html.js"));
 
 //connection to port
 app.listen(PORT, () => {
-    console.log("App running on port ${PORT}!");
+    console.log("App running on port " + PORT);
 });

@@ -24,7 +24,7 @@ const API = {
 
     return json;
   },
-  //creates new workout, returns workout id
+  
   async createWorkout(data = {}) {
     const res = await fetch("/api/workouts", {
       method: "POST",
