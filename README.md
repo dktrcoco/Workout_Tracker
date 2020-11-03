@@ -54,13 +54,13 @@ THEN I can see the details of the exercises for the day summed and listed
 ## Images
 
 Fig. 1: Landing Page
-![Landing Page](./public/assets/img/homepage.png)
+![Landing Page](./public/assets/img/homepage.PNG)
 
 Fig. 2: Add an Exercise
-![Add Exercise](./public/assets/img/add_exercise.png)
+![Add Exercise](./public/assets/img/add_exercise.PNG)
 
 Fig. 3: Dashboard
-![Dashboard](./public/assets/img/dashboard.png)
+![Dashboard](./public/assets/img/dashboard.PNG)
 
 ## Install
 
